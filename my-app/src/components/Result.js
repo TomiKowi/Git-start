@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Result = () => {
+const Result = (props) => {
+
+    const { image } = props
+
     return (
-        <div>Result</div>
+        <div>
+            {image ? <img src={image} alt="Random Dog" /> : null}
+        </div>
     );
 }
 
