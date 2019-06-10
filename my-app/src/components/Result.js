@@ -1,12 +1,15 @@
 import React from 'react';
+import '../Result.css';
 
 const Result = (props) => {
 
     const { image } = props
 
     return (
-        <div>
-            {image ? <img src={image} alt="Random Dog" /> : null}
+        <div className="resultContainer">
+            <div className="imageContainer">
+                {image ? <img src={image} alt="Random Dog" /> : null}
+            </div>
         </div>
     );
 }

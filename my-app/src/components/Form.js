@@ -1,8 +1,11 @@
 import React from 'react';
+import '../Form.css';
 
 const Form = (props) => {
     return (
-        <button onClick={props.click} className="searchButton">Wyszukaj pieska</button>
+        <div className="searchForm">
+            <button onClick={props.click} className="searchButton">Wyszukaj pieska</button>
+        </div>
     );
 }
 
