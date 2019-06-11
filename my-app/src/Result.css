@@ -1,14 +1,16 @@
 div.resultContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     height: 85vh;
+    width: 50vw;
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
 
 div.imageContainer {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
 }
 
 img {

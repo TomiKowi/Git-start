@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import Result from './Result';
+import FavoriteDogs from './FavoriteDogs';
 import '../App.css';
 
 class App extends Component {
 
   state = {
-    image: ''
+    image: '',
+    favoriteImages: []
   }
 
   handleClick = () => {
@@ -29,11 +31,23 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
+  handleAddClick = () => {
+    const favorites = [...this.state.favoriteImages];
+    favorites.push(this.state.image);
+    this.setState({
+      favoriteImages: favorites
+    })
+
+  }
+
   render() {
     return (
       <div className="App" >
         <Form click={this.handleClick} />
-        <Result image={this.state.image} />
+        <div className="mainContainer">
+          <Result image={this.state.image} addClick={this.handleAddClick} />
+          <FavoriteDogs />
+        </div>
       </div>
     );
   }

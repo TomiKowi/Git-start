@@ -4,7 +4,8 @@
     align-items: center;
     height: 15vh;
     width: 100vw;
-    background-color: #537895;
+    /* background-color: #537895; */
+    background-color: #fff;
 }
 
 .searchForm button {

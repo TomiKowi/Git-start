@@ -1,0 +1,13 @@
+h3 {
+    color: red;
+}
+
+div.dogsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-star;
+    height: 85vh;
+    width: 50vw;
+    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+    background-color: aquamarine;
+}
