@@ -4,7 +4,7 @@ import '../Form.css';
 const Form = (props) => {
     return (
         <div className="searchForm">
-            <button onClick={props.click} className="searchButton">Wyszukaj pieska</button>
+            {props.image ? <button onClick={props.click} className="searchButton">Wyszukaj kolejnego pieska</button> : <button onClick={props.click} className="searchButton">Wyszukaj pieska</button>}
         </div>
     );
 }

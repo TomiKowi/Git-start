@@ -10,7 +10,8 @@ const Result = (props) => {
             <div className="imageContainer">
                 {image ? <img src={image} alt="Random Dog" /> : null}
             </div>
-            <button onClick={addClick}>Dodaj pieska do kolekcji</button>
+            {image ? <button className="addToFavorites" onClick={addClick}>Dodaj pieska do kolekcji</button> : null}
+
         </div>
     );
 }

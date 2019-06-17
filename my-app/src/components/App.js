@@ -33,20 +33,29 @@ class App extends Component {
 
   handleAddClick = () => {
     const favorites = [...this.state.favoriteImages];
-    favorites.push(this.state.image);
-    this.setState({
-      favoriteImages: favorites
-    })
+
+    if (favorites.length >= 9) {
+      alert("Baza piesków zapełniona, nie mozesz dodać więcej piesków!")
+    } else if (favorites.includes(this.state.image)) {
+      alert("Ten piesek został juz dodany :(")
+    }
+    else {
+      favorites.push(this.state.image);
+      this.setState({
+        favoriteImages: favorites
+      })
+    }
+
 
   }
 
   render() {
     return (
       <div className="App" >
-        <Form click={this.handleClick} />
+        <Form image={this.state.image} click={this.handleClick} />
         <div className="mainContainer">
           <Result image={this.state.image} addClick={this.handleAddClick} />
-          <FavoriteDogs />
+          <FavoriteDogs favorites={this.state.favoriteImages} />
         </div>
       </div>
     );

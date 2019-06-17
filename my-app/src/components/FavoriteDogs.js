@@ -2,11 +2,15 @@ import React from 'react';
 import '../FavoriteDogs.css'
 
 
-const FavoriteDogs = () => {
+const Favorite = (props) => <div className="imageFavoriteDogsContainer"><img src={props.content} alt="" /></div>
+
+const FavoriteDogs = (props) => {
+
+    const Favorites = props.favorites.map(favorite => <Favorite content={favorite} />)
 
     return (
-        <div className="dogsContainer">
-            <h3>Moje ulubione psiaki</h3>
+        <div className="favoriteDogsContainer">
+            {Favorites}
         </div>
     );
 }

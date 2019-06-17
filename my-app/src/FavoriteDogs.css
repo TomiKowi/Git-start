@@ -1,13 +1,20 @@
-h3 {
-    color: red;
+div.favoriteDogsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 45vw;
+    border: solid 2px black;
 }
 
-div.dogsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-star;
-    height: 85vh;
-    width: 50vw;
-    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
-    background-color: aquamarine;
+div.imageFavoriteDogsContainer {
+    width: 180px;
+    height: 180px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
