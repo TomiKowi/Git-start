@@ -32,10 +32,10 @@ class App extends Component {
   }
 
   handleAddClick = () => {
-    const favorites = [...this.state.favoriteImages];
 
-    if (favorites.length >= 9) {
-      alert("Baza piesków zapełniona, nie mozesz dodać więcej piesków!")
+    const favorites = [...this.state.favoriteImages];
+    if (favorites.length >= 7) {
+      alert("Baza piesków zapełniona, nie mozesz dodać więcej piesków! Usuń niechcianego pieska z kolekcji!")
     } else if (favorites.includes(this.state.image)) {
       alert("Ten piesek został juz dodany :(")
     }
@@ -45,8 +45,14 @@ class App extends Component {
         favoriteImages: favorites
       })
     }
+  }
 
-
+  handleRemoveClick = (index) => {
+    const favorites = [...this.state.favoriteImages];
+    favorites.splice(index, 1)
+    this.setState({
+      favoriteImages: favorites
+    })
   }
 
   render() {
@@ -55,7 +61,7 @@ class App extends Component {
         <Form image={this.state.image} click={this.handleClick} />
         <div className="mainContainer">
           <Result image={this.state.image} addClick={this.handleAddClick} />
-          <FavoriteDogs favorites={this.state.favoriteImages} />
+          <FavoriteDogs removeClick={this.handleRemoveClick} favorites={this.state.favoriteImages} />
         </div>
       </div>
     );
