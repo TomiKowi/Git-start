@@ -1,5 +1,5 @@
 import React from 'react';
-import '../FavoriteDogs.css'
+import '../styles/FavoriteDogs.css'
 
 
 const Favorite = (props) => <div className="imageFavoriteDogsContainer"><img src={props.content} alt="FavoriteDog" /><button className="removeButton" onClick={props.remove}>Usuń</button></div>

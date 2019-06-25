@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from './Form';
 import Result from './Result';
 import FavoriteDogs from './FavoriteDogs';
-import '../App.css';
+import '../styles/App.css';
 
 
 
