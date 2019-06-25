@@ -4,6 +4,8 @@ import Result from './Result';
 import FavoriteDogs from './FavoriteDogs';
 import '../App.css';
 
+
+
 class App extends Component {
 
   state = {
@@ -13,7 +15,7 @@ class App extends Component {
 
   handleClick = () => {
 
-    const API = 'https://dog.ceo/api/breeds/image/random'
+    const API = 'https://dog.ceo/api/breeds/image/random';
 
     fetch(API)
       .then(response => {
@@ -33,11 +35,15 @@ class App extends Component {
 
   handleAddClick = () => {
 
+    const alertDuplicateDog = "Ten piesek został juz dodany :(";
+    const alertFullFavorites = "Baza piesków zapełniona, nie mozesz dodać więcej piesków! Usuń niechcianego pieska z kolekcji!";
+
+
     const favorites = [...this.state.favoriteImages];
     if (favorites.length >= 7) {
-      alert("Baza piesków zapełniona, nie mozesz dodać więcej piesków! Usuń niechcianego pieska z kolekcji!")
+      alert(alertFullFavorites)
     } else if (favorites.includes(this.state.image)) {
-      alert("Ten piesek został juz dodany :(")
+      alert(alertDuplicateDog)
     }
     else {
       favorites.push(this.state.image);
