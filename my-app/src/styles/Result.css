@@ -3,15 +3,11 @@ div.resultContainer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 52vh;
-    width: 90vw;
-    margin-bottom: 10px;
-    border: 2px solid #efa747;
-    border-radius: 6px;
+    height: 55vh;
+    width: 30vw;
 }
 
 div.imageContainer {
-
     width: 300px;
     height: 300px;
 }
@@ -23,8 +19,9 @@ img {
 }
 
 button.addToFavorites {
-    width: 300px;
+    width: 20vw;
     padding: 10px 15px;
+    margin-top: -40px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -32,14 +29,12 @@ button.addToFavorites {
     outline: none;
     transition: all 0.3s ease;
     background-color: inherit;
+    color: #efa747;
     border: 1px solid #efa747;
     border-radius: 4px;
-    color: #efa747;
 }
 
 button.addToFavorites:hover {
     background-color: #efa747;
-    border: 1px solid #dac6ac;
-    border-radius: 4px;
     color: #10000c;
 }
