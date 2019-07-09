@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dogs-API/static/css/main.be4d532f.chunk.css",
+    "main.js": "/dogs-API/static/js/main.b8413008.chunk.js",
+    "main.js.map": "/dogs-API/static/js/main.b8413008.chunk.js.map",
+    "runtime~main.js": "/dogs-API/static/js/runtime~main.28322900.js",
+    "runtime~main.js.map": "/dogs-API/static/js/runtime~main.28322900.js.map",
+    "static/js/2.164617b5.chunk.js": "/dogs-API/static/js/2.164617b5.chunk.js",
+    "static/js/2.164617b5.chunk.js.map": "/dogs-API/static/js/2.164617b5.chunk.js.map",
+    "index.html": "/dogs-API/index.html",
+    "precache-manifest.79f116c43d6cfbc312af2c10d8126398.js": "/dogs-API/precache-manifest.79f116c43d6cfbc312af2c10d8126398.js",
+    "service-worker.js": "/dogs-API/service-worker.js",
+    "static/css/main.be4d532f.chunk.css.map": "/dogs-API/static/css/main.be4d532f.chunk.css.map"
+  }
+}
